@@ -52,6 +52,9 @@
       this.ColorTolleranceSlider = new System.Windows.Forms.TrackBar();
       this.ColorTollDisplayLab = new System.Windows.Forms.Label();
       this.label8 = new System.Windows.Forms.Label();
+      this.EscHintLab = new System.Windows.Forms.Label();
+      this.CaughtCountLab = new System.Windows.Forms.Label();
+      this.HideUiChk = new System.Windows.Forms.CheckBox();
       ((System.ComponentModel.ISupportInitialize)(this.RefishTimeSlider)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.LootTimeSlider)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.SelectColorPic)).BeginInit();
@@ -90,7 +93,7 @@
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(23, 54);
+      this.label1.Location = new System.Drawing.Point(23, 70);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(64, 13);
       this.label1.TabIndex = 3;
@@ -99,7 +102,7 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(35, 81);
+      this.label2.Location = new System.Drawing.Point(35, 97);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(52, 13);
       this.label2.TabIndex = 4;
@@ -108,7 +111,7 @@
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(37, 108);
+      this.label3.Location = new System.Drawing.Point(37, 124);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(50, 13);
       this.label3.TabIndex = 5;
@@ -117,7 +120,7 @@
       // label4
       // 
       this.label4.AutoSize = true;
-      this.label4.Location = new System.Drawing.Point(31, 135);
+      this.label4.Location = new System.Drawing.Point(31, 151);
       this.label4.Name = "label4";
       this.label4.Size = new System.Drawing.Size(56, 13);
       this.label4.TabIndex = 6;
@@ -129,7 +132,7 @@
       this.FishingKeyCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.FishingKeyCB.ForeColor = System.Drawing.Color.Black;
       this.FishingKeyCB.FormattingEnabled = true;
-      this.FishingKeyCB.Location = new System.Drawing.Point(93, 51);
+      this.FishingKeyCB.Location = new System.Drawing.Point(93, 67);
       this.FishingKeyCB.Name = "FishingKeyCB";
       this.FishingKeyCB.Size = new System.Drawing.Size(107, 21);
       this.FishingKeyCB.TabIndex = 7;
@@ -142,7 +145,7 @@
       this.LureKeyCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.LureKeyCB.ForeColor = System.Drawing.Color.Black;
       this.LureKeyCB.FormattingEnabled = true;
-      this.LureKeyCB.Location = new System.Drawing.Point(93, 78);
+      this.LureKeyCB.Location = new System.Drawing.Point(93, 94);
       this.LureKeyCB.Name = "LureKeyCB";
       this.LureKeyCB.Size = new System.Drawing.Size(107, 21);
       this.LureKeyCB.TabIndex = 8;
@@ -155,7 +158,7 @@
       this.BuffKeyCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.BuffKeyCB.ForeColor = System.Drawing.Color.Black;
       this.BuffKeyCB.FormattingEnabled = true;
-      this.BuffKeyCB.Location = new System.Drawing.Point(93, 105);
+      this.BuffKeyCB.Location = new System.Drawing.Point(93, 121);
       this.BuffKeyCB.Name = "BuffKeyCB";
       this.BuffKeyCB.Size = new System.Drawing.Size(107, 21);
       this.BuffKeyCB.TabIndex = 9;
@@ -168,7 +171,7 @@
       this.OutfitKeyCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.OutfitKeyCB.ForeColor = System.Drawing.Color.Black;
       this.OutfitKeyCB.FormattingEnabled = true;
-      this.OutfitKeyCB.Location = new System.Drawing.Point(93, 132);
+      this.OutfitKeyCB.Location = new System.Drawing.Point(93, 148);
       this.OutfitKeyCB.Name = "OutfitKeyCB";
       this.OutfitKeyCB.Size = new System.Drawing.Size(107, 21);
       this.OutfitKeyCB.TabIndex = 10;
@@ -178,7 +181,7 @@
       // label5
       // 
       this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(249, 54);
+      this.label5.Location = new System.Drawing.Point(249, 70);
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(69, 13);
       this.label5.TabIndex = 11;
@@ -187,7 +190,7 @@
       // label6
       // 
       this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(258, 135);
+      this.label6.Location = new System.Drawing.Point(258, 151);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(60, 13);
       this.label6.TabIndex = 12;
@@ -197,7 +200,7 @@
       // 
       this.RefishTimeSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.RefishTimeSlider.Location = new System.Drawing.Point(324, 51);
+      this.RefishTimeSlider.Location = new System.Drawing.Point(324, 67);
       this.RefishTimeSlider.Maximum = 60;
       this.RefishTimeSlider.Minimum = 1;
       this.RefishTimeSlider.Name = "RefishTimeSlider";
@@ -210,7 +213,7 @@
       // 
       this.LootTimeSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.LootTimeSlider.Location = new System.Drawing.Point(324, 132);
+      this.LootTimeSlider.Location = new System.Drawing.Point(324, 148);
       this.LootTimeSlider.Maximum = 60;
       this.LootTimeSlider.Minimum = 1;
       this.LootTimeSlider.Name = "LootTimeSlider";
@@ -223,7 +226,7 @@
       // 
       this.RefishTimeDisplayLab.AutoSize = true;
       this.RefishTimeDisplayLab.ForeColor = System.Drawing.Color.Gray;
-      this.RefishTimeDisplayLab.Location = new System.Drawing.Point(330, 83);
+      this.RefishTimeDisplayLab.Location = new System.Drawing.Point(330, 99);
       this.RefishTimeDisplayLab.Name = "RefishTimeDisplayLab";
       this.RefishTimeDisplayLab.Size = new System.Drawing.Size(95, 13);
       this.RefishTimeDisplayLab.TabIndex = 15;
@@ -233,7 +236,7 @@
       // 
       this.LootTimeDisplayLab.AutoSize = true;
       this.LootTimeDisplayLab.ForeColor = System.Drawing.Color.Gray;
-      this.LootTimeDisplayLab.Location = new System.Drawing.Point(330, 164);
+      this.LootTimeDisplayLab.Location = new System.Drawing.Point(330, 180);
       this.LootTimeDisplayLab.Name = "LootTimeDisplayLab";
       this.LootTimeDisplayLab.Size = new System.Drawing.Size(86, 13);
       this.LootTimeDisplayLab.TabIndex = 16;
@@ -242,7 +245,7 @@
       // FishingKeySetBtn
       // 
       this.FishingKeySetBtn.BackColor = System.Drawing.Color.Gainsboro;
-      this.FishingKeySetBtn.Location = new System.Drawing.Point(206, 50);
+      this.FishingKeySetBtn.Location = new System.Drawing.Point(206, 66);
       this.FishingKeySetBtn.Name = "FishingKeySetBtn";
       this.FishingKeySetBtn.Size = new System.Drawing.Size(23, 23);
       this.FishingKeySetBtn.TabIndex = 17;
@@ -254,7 +257,7 @@
       // LureKeySetBtn
       // 
       this.LureKeySetBtn.BackColor = System.Drawing.Color.Gainsboro;
-      this.LureKeySetBtn.Location = new System.Drawing.Point(206, 77);
+      this.LureKeySetBtn.Location = new System.Drawing.Point(206, 93);
       this.LureKeySetBtn.Name = "LureKeySetBtn";
       this.LureKeySetBtn.Size = new System.Drawing.Size(23, 23);
       this.LureKeySetBtn.TabIndex = 18;
@@ -266,7 +269,7 @@
       // BuffKeySetBtn
       // 
       this.BuffKeySetBtn.BackColor = System.Drawing.Color.Gainsboro;
-      this.BuffKeySetBtn.Location = new System.Drawing.Point(206, 104);
+      this.BuffKeySetBtn.Location = new System.Drawing.Point(206, 120);
       this.BuffKeySetBtn.Name = "BuffKeySetBtn";
       this.BuffKeySetBtn.Size = new System.Drawing.Size(23, 23);
       this.BuffKeySetBtn.TabIndex = 19;
@@ -278,7 +281,7 @@
       // OutfitKeySetBtn
       // 
       this.OutfitKeySetBtn.BackColor = System.Drawing.Color.Gainsboro;
-      this.OutfitKeySetBtn.Location = new System.Drawing.Point(206, 131);
+      this.OutfitKeySetBtn.Location = new System.Drawing.Point(206, 147);
       this.OutfitKeySetBtn.Name = "OutfitKeySetBtn";
       this.OutfitKeySetBtn.Size = new System.Drawing.Size(23, 23);
       this.OutfitKeySetBtn.TabIndex = 20;
@@ -304,9 +307,9 @@
       this.SelectColorPic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.SelectColorPic.Location = new System.Drawing.Point(0, 276);
+      this.SelectColorPic.Location = new System.Drawing.Point(0, 292);
       this.SelectColorPic.Name = "SelectColorPic";
-      this.SelectColorPic.Size = new System.Drawing.Size(845, 296);
+      this.SelectColorPic.Size = new System.Drawing.Size(845, 301);
       this.SelectColorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
       this.SelectColorPic.TabIndex = 22;
       this.SelectColorPic.TabStop = false;
@@ -316,7 +319,7 @@
       // 
       this.ColorDisplayLab.BackColor = System.Drawing.Color.White;
       this.ColorDisplayLab.ForeColor = System.Drawing.Color.Black;
-      this.ColorDisplayLab.Location = new System.Drawing.Point(4, 250);
+      this.ColorDisplayLab.Location = new System.Drawing.Point(4, 266);
       this.ColorDisplayLab.Name = "ColorDisplayLab";
       this.ColorDisplayLab.Size = new System.Drawing.Size(100, 23);
       this.ColorDisplayLab.TabIndex = 23;
@@ -325,14 +328,14 @@
       // 
       // GeneralTicker
       // 
-      this.GeneralTicker.Interval = 1000;
+      this.GeneralTicker.Interval = 250;
       this.GeneralTicker.Tick += new System.EventHandler(this.GeneralTicker_Tick);
       // 
       // ColorTolleranceSlider
       // 
       this.ColorTolleranceSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.ColorTolleranceSlider.Location = new System.Drawing.Point(324, 213);
+      this.ColorTolleranceSlider.Location = new System.Drawing.Point(324, 229);
       this.ColorTolleranceSlider.Maximum = 255;
       this.ColorTolleranceSlider.Name = "ColorTolleranceSlider";
       this.ColorTolleranceSlider.Size = new System.Drawing.Size(509, 45);
@@ -344,7 +347,7 @@
       // 
       this.ColorTollDisplayLab.AutoSize = true;
       this.ColorTollDisplayLab.ForeColor = System.Drawing.Color.Gray;
-      this.ColorTollDisplayLab.Location = new System.Drawing.Point(330, 245);
+      this.ColorTollDisplayLab.Location = new System.Drawing.Point(330, 261);
       this.ColorTollDisplayLab.Name = "ColorTollDisplayLab";
       this.ColorTollDisplayLab.Size = new System.Drawing.Size(92, 13);
       this.ColorTollDisplayLab.TabIndex = 25;
@@ -353,17 +356,52 @@
       // label8
       // 
       this.label8.AutoSize = true;
-      this.label8.Location = new System.Drawing.Point(235, 213);
+      this.label8.Location = new System.Drawing.Point(235, 229);
       this.label8.Name = "label8";
       this.label8.Size = new System.Drawing.Size(83, 13);
       this.label8.TabIndex = 26;
       this.label8.Text = "Color tollerance:";
       // 
-      // frmMain
+      // EscHintLab
       // 
+      this.EscHintLab.AutoSize = true;
+      this.EscHintLab.ForeColor = System.Drawing.Color.Gray;
+      this.EscHintLab.Location = new System.Drawing.Point(12, 43);
+      this.EscHintLab.Name = "EscHintLab";
+      this.EscHintLab.Size = new System.Drawing.Size(351, 13);
+      this.EscHintLab.TabIndex = 27;
+      this.EscHintLab.Text = "Hint: ESC stops the bot at any time — even while the game has the focus.";
+      // 
+      // CaughtCountLab
+      // 
+      this.CaughtCountLab.AutoSize = true;
+      this.CaughtCountLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.CaughtCountLab.Location = new System.Drawing.Point(12, 229);
+      this.CaughtCountLab.Name = "CaughtCountLab";
+      this.CaughtCountLab.Size = new System.Drawing.Size(53, 13);
+      this.CaughtCountLab.TabIndex = 28;
+      this.CaughtCountLab.Text = "Loots: 0";
+      //
+      // HideUiChk
+      //
+      this.HideUiChk.AutoSize = true;
+      this.HideUiChk.Checked = true;
+      this.HideUiChk.CheckState = System.Windows.Forms.CheckState.Checked;
+      this.HideUiChk.Location = new System.Drawing.Point(420, 41);
+      this.HideUiChk.Name = "HideUiChk";
+      this.HideUiChk.Size = new System.Drawing.Size(135, 17);
+      this.HideUiChk.TabIndex = 29;
+      this.HideUiChk.Text = "Hide game UI (Alt+Y)";
+      this.HideUiChk.UseVisualStyleBackColor = true;
+      //
+      // frmMain
+      //
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(845, 572);
+      this.ClientSize = new System.Drawing.Size(845, 593);
+      this.Controls.Add(this.HideUiChk);
+      this.Controls.Add(this.CaughtCountLab);
+      this.Controls.Add(this.EscHintLab);
       this.Controls.Add(this.label8);
       this.Controls.Add(this.ColorTollDisplayLab);
       this.Controls.Add(this.ColorTolleranceSlider);
@@ -433,6 +471,9 @@
     private System.Windows.Forms.TrackBar ColorTolleranceSlider;
     private System.Windows.Forms.Label ColorTollDisplayLab;
     private System.Windows.Forms.Label label8;
+    private System.Windows.Forms.Label EscHintLab;
+    private System.Windows.Forms.Label CaughtCountLab;
+    private System.Windows.Forms.CheckBox HideUiChk;
   }
 }
 

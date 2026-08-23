@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -150,9 +151,9 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("ColorTollerance")]
-    private int _ColorTollerance = 5;
+    private int _ColorTollerance = 30;
     /// <summary>
-    /// Defines how much the bobber collor can varry.
+    /// Per-channel tolerance (0-255) when matching pixels against the bobber color.
     /// </summary>
     public static int ColorTollerance {
       get {
@@ -160,6 +161,75 @@ namespace DefinetlyNotAFishingBot {
       }
       set {
         MySelf._ColorTollerance = value;
+      }
+    }
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("BobberColorArgb")]
+    private int _BobberColorArgb = unchecked((int)0xFF5C3227);
+    /// <summary>
+    /// The bobber color the developer picked from the capture preview, stored as
+    /// an ARGB value. Zero means no color has been picked yet; defaults to the
+    /// bobber feather color (#5C3227) picked on the dev machine.
+    /// </summary>
+    public static Color BobberColor {
+      get {
+        return Color.FromArgb(MySelf._BobberColorArgb);
+      }
+      set {
+        MySelf._BobberColorArgb = value.ToArgb();
+      }
+    }
+
+    /// <summary>True once the developer has picked a bobber color.</summary>
+    public static bool HasBobberColor {
+      get {
+        return MySelf._BobberColorArgb != 0;
+      }
+    }
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("HideGameUi")]
+    private bool _HideGameUi = true;
+    /// <summary>
+    /// Whether the bot hides the WoW interface with Alt+Y while it runs, so no
+    /// UI element can cover the bobber or disturb the pixel detection.
+    /// </summary>
+    public static bool HideGameUi {
+      get {
+        return MySelf._HideGameUi;
+      }
+      set {
+        MySelf._HideGameUi = value;
+      }
+    }
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("CaptureX")]
+    private int _CaptureX = 1086;
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("CaptureY")]
+    private int _CaptureY = 159;
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("CaptureWidth")]
+    private int _CaptureWidth = 3140;
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Newtonsoft.Json.JsonProperty("CaptureHeight")]
+    private int _CaptureHeight = 820;
+    /// <summary>
+    /// Position and size of the capture overlay window. Updated whenever the
+    /// developer moves or resizes the overlay, so it comes back up in the same
+    /// spot next time.
+    /// </summary>
+    public static Rectangle CaptureBounds {
+      get {
+        return new Rectangle(MySelf._CaptureX, MySelf._CaptureY, MySelf._CaptureWidth, MySelf._CaptureHeight);
+      }
+      set {
+        MySelf._CaptureX = value.X;
+        MySelf._CaptureY = value.Y;
+        MySelf._CaptureWidth = value.Width;
+        MySelf._CaptureHeight = value.Height;
       }
     }
   }

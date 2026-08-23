@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4C21F8DD-F266-4C38-BA7F-463FC0682158}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>DefinetlyNotAFishingBot</RootNamespace>
     <AssemblyName>DefinetlyNotAFishingBot</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -52,8 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BobberDetector.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="ConsoleInterface.cs" />
+    <Compile Include="FishingBot.cs" />
+    <Compile Include="InputSender.cs" />
     <Compile Include="frmCapture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +73,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenManager.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="WowWindow.cs" />
     <EmbeddedResource Include="frmCapture.resx">
       <DependentUpon>frmCapture.cs</DependentUpon>
     </EmbeddedResource>
