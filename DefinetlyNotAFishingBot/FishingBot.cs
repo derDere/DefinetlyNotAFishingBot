@@ -60,8 +60,12 @@ namespace DefinetlyNotAFishingBot {
     private const int WATCH_TIMEOUT_MS = 25000;
     /// <summary>No fish ever bites this early after the bobber landed — ignore bite signals before then.</summary>
     private const int MIN_WATCH_BEFORE_BITE_MS = 2000;
-    /// <summary>How often the bobber region is re-scanned while waiting for the bite.</summary>
-    private const int SAMPLE_INTERVAL_MS = 100;
+    /// <summary>
+    /// Pause between bobber scans while waiting for the bite. The dip only
+    /// lasts a few hundred milliseconds, so the watcher runs at ~25-30 scans
+    /// per second — feasible because it only captures the small watch region.
+    /// </summary>
+    private const int SAMPLE_INTERVAL_MS = 30;
     /// <summary>Number of initial scans averaged into the "calm bobber" baseline.</summary>
     private const int BASELINE_SAMPLES = 5;
     /// <summary>Minimum matching pixels for the bobber to count as "found".</summary>
@@ -270,12 +274,18 @@ namespace DefinetlyNotAFishingBot {
     /// </summary>
     private bool WatchForBite(BobberSample initial, out Point clickPoint) {
       clickPoint = initial.Centroid;
-      Rectangle watchRegion = new Rectangle(
-        initial.Centroid.X - WATCH_RADIUS,
-        initial.Centroid.Y - WATCH_RADIUS,
-        WATCH_RADIUS * 2,
-        WATCH_RADIUS * 2
+      Rectangle captureArea = new Rectangle(Point.Empty, screenManager.GetCaptureRectangle().Size);
+      Rectangle watchRegion = Rectangle.Intersect(
+        new Rectangle(
+          initial.Centroid.X - WATCH_RADIUS,
+          initial.Centroid.Y - WATCH_RADIUS,
+          WATCH_RADIUS * 2,
+          WATCH_RADIUS * 2
+        ),
+        captureArea
       );
+      if (watchRegion.Width <= 0 || watchRegion.Height <= 0)
+        return false;
 
       SetBobberMarker(watchRegion);
 
@@ -293,10 +303,14 @@ namespace DefinetlyNotAFishingBot {
         if (!wowWindow.IsForeground)
           return false;
 
+        // Capture only the small watch region — a full-overlay capture per
+        // sample would throttle the loop to a few frames per second.
         BobberSample sample;
-        using (Bitmap shot = screenManager.GetScreenCapture()) {
-          sample = BobberDetector.Scan(shot, watchRegion, Config.BobberColor, Config.ColorTollerance);
+        using (Bitmap shot = screenManager.GetScreenCapture(watchRegion)) {
+          sample = BobberDetector.Scan(shot, new Rectangle(Point.Empty, shot.Size), Config.BobberColor, Config.ColorTollerance);
         }
+        if (sample.MatchCount > 0)
+          sample.Centroid = new Point(sample.Centroid.X + watchRegion.X, sample.Centroid.Y + watchRegion.Y);
 
         samples++;
         if (sample.MatchCount >= MIN_BOBBER_PIXELS)

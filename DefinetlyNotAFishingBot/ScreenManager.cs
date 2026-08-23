@@ -50,5 +50,26 @@ namespace DefinetlyNotAFishingBot {
 
       return b;
     }
+
+    /// <summary>
+    /// Takes a screenshot of only a sub-region of the capture rectangle (region
+    /// given in capture coordinates, clamped to it). Capturing just the small
+    /// watch region instead of the whole overlay is what makes the fast bite
+    /// sampling possible. The caller owns (and disposes) the bitmap.
+    /// </summary>
+    internal Bitmap GetScreenCapture(Rectangle region) {
+      Rectangle captureRect = GetCaptureRectangle();
+      Rectangle bounds = Rectangle.Intersect(new Rectangle(Point.Empty, captureRect.Size), region);
+      if (bounds.Width <= 0 || bounds.Height <= 0)
+        bounds = new Rectangle(0, 0, 1, 1);
+
+      Bitmap b = new Bitmap(bounds.Width, bounds.Height);
+
+      using (Graphics g = Graphics.FromImage(b)) {
+        g.CopyFromScreen(new Point(captureRect.X + bounds.X, captureRect.Y + bounds.Y), Point.Empty, bounds.Size);
+      }
+
+      return b;
+    }
   }
 }
