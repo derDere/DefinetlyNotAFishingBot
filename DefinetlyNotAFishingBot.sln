@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefinetlyNotAFishingBot", "DefinetlyNotAFishingBot\DefinetlyNotAFishingBot.csproj", "{4C21F8DD-F266-4C38-BA7F-463FC0682158}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C21F8DD-F266-4C38-BA7F-463FC0682158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C21F8DD-F266-4C38-BA7F-463FC0682158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C21F8DD-F266-4C38-BA7F-463FC0682158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C21F8DD-F266-4C38-BA7F-463FC0682158}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E40B7056-0598-4D06-815A-C43D6996BF58}
+	EndGlobalSection
+EndGlobal
