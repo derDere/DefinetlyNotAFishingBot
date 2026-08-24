@@ -202,11 +202,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.RefishTimeSlider.Location = new System.Drawing.Point(324, 67);
       this.RefishTimeSlider.Maximum = 60;
-      this.RefishTimeSlider.Minimum = 1;
       this.RefishTimeSlider.Name = "RefishTimeSlider";
       this.RefishTimeSlider.Size = new System.Drawing.Size(509, 45);
       this.RefishTimeSlider.TabIndex = 13;
-      this.RefishTimeSlider.Value = 2;
+      this.RefishTimeSlider.Value = 3;
       this.RefishTimeSlider.Scroll += new System.EventHandler(this.RefishTimeSlider_Scroll);
       // 
       // LootTimeSlider
@@ -215,11 +214,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.LootTimeSlider.Location = new System.Drawing.Point(324, 148);
       this.LootTimeSlider.Maximum = 60;
-      this.LootTimeSlider.Minimum = 1;
       this.LootTimeSlider.Name = "LootTimeSlider";
       this.LootTimeSlider.Size = new System.Drawing.Size(509, 45);
       this.LootTimeSlider.TabIndex = 14;
-      this.LootTimeSlider.Value = 2;
+      this.LootTimeSlider.Value = 1;
       this.LootTimeSlider.Scroll += new System.EventHandler(this.LootTimeSlider_Scroll);
       // 
       // RefishTimeDisplayLab
@@ -230,7 +228,7 @@
       this.RefishTimeDisplayLab.Name = "RefishTimeDisplayLab";
       this.RefishTimeDisplayLab.Size = new System.Drawing.Size(95, 13);
       this.RefishTimeDisplayLab.TabIndex = 15;
-      this.RefishTimeDisplayLab.Text = "Refish Time: 2 sec";
+      this.RefishTimeDisplayLab.Text = "Refish Time: 3 sec";
       // 
       // LootTimeDisplayLab
       // 
@@ -240,7 +238,7 @@
       this.LootTimeDisplayLab.Name = "LootTimeDisplayLab";
       this.LootTimeDisplayLab.Size = new System.Drawing.Size(86, 13);
       this.LootTimeDisplayLab.TabIndex = 16;
-      this.LootTimeDisplayLab.Text = "Loot Time: 2 sec";
+      this.LootTimeDisplayLab.Text = "Loot Time: 1 sec";
       // 
       // FishingKeySetBtn
       // 
@@ -307,6 +305,7 @@
       this.SelectColorPic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+      this.SelectColorPic.BackColor = System.Drawing.Color.Black;
       this.SelectColorPic.Location = new System.Drawing.Point(0, 292);
       this.SelectColorPic.Name = "SelectColorPic";
       this.SelectColorPic.Size = new System.Drawing.Size(845, 301);
@@ -340,7 +339,7 @@
       this.ColorTolleranceSlider.Name = "ColorTolleranceSlider";
       this.ColorTolleranceSlider.Size = new System.Drawing.Size(509, 45);
       this.ColorTolleranceSlider.TabIndex = 24;
-      this.ColorTolleranceSlider.Value = 5;
+      this.ColorTolleranceSlider.Value = 20;
       this.ColorTolleranceSlider.Scroll += new System.EventHandler(this.ColorTolleranceSlider_Scroll);
       // 
       // ColorTollDisplayLab
@@ -349,9 +348,9 @@
       this.ColorTollDisplayLab.ForeColor = System.Drawing.Color.Gray;
       this.ColorTollDisplayLab.Location = new System.Drawing.Point(330, 261);
       this.ColorTollDisplayLab.Name = "ColorTollDisplayLab";
-      this.ColorTollDisplayLab.Size = new System.Drawing.Size(92, 13);
+      this.ColorTollDisplayLab.Size = new System.Drawing.Size(98, 13);
       this.ColorTollDisplayLab.TabIndex = 25;
-      this.ColorTollDisplayLab.Text = "Color tollerance: 5";
+      this.ColorTollDisplayLab.Text = "Color tollerance: 20";
       // 
       // label8
       // 
@@ -381,21 +380,21 @@
       this.CaughtCountLab.Size = new System.Drawing.Size(53, 13);
       this.CaughtCountLab.TabIndex = 28;
       this.CaughtCountLab.Text = "Loots: 0";
-      //
+      // 
       // HideUiChk
-      //
+      // 
       this.HideUiChk.AutoSize = true;
       this.HideUiChk.Checked = true;
       this.HideUiChk.CheckState = System.Windows.Forms.CheckState.Checked;
       this.HideUiChk.Location = new System.Drawing.Point(420, 41);
       this.HideUiChk.Name = "HideUiChk";
-      this.HideUiChk.Size = new System.Drawing.Size(135, 17);
+      this.HideUiChk.Size = new System.Drawing.Size(125, 17);
       this.HideUiChk.TabIndex = 29;
       this.HideUiChk.Text = "Hide game UI (Alt+Y)";
       this.HideUiChk.UseVisualStyleBackColor = true;
-      //
+      // 
       // frmMain
-      //
+      // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(845, 593);

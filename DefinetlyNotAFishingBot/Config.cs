@@ -61,7 +61,7 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("RefishTime")]
-    private int _RefishTime = 2;
+    private int _RefishTime = 3;
     /// <summary>
     /// Time in seconds the bot will wait after looting before refishing.
     /// </summary>
@@ -76,7 +76,7 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("LootTime")]
-    private int _LootTime = 2;
+    private int _LootTime = 1;
     /// <summary>
     /// Time in seconds the bot will wait after a catch before looting.
     /// </summary>
@@ -106,7 +106,7 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("LureKey")]
-    private Keys _LureKey = Keys.D0;
+    private Keys _LureKey = Keys.Oem6;
     /// <summary>
     /// The Key used to apply a Lure.
     /// </summary>
@@ -136,7 +136,7 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("OutfitKey")]
-    private Keys _OutfitKey = Keys.Oem6;
+    private Keys _OutfitKey = Keys.D0;
     /// <summary>
     /// The key used to change into the right outfit.
     /// </summary>
@@ -151,7 +151,7 @@ namespace DefinetlyNotAFishingBot {
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Newtonsoft.Json.JsonProperty("ColorTollerance")]
-    private int _ColorTollerance = 30;
+    private int _ColorTollerance = 20;
     /// <summary>
     /// Per-channel tolerance (0-255) when matching pixels against the bobber color.
     /// </summary>

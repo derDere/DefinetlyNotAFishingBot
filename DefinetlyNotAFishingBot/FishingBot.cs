@@ -370,7 +370,7 @@ namespace DefinetlyNotAFishingBot {
     /// <summary>Moves the cursor onto the bobber (capture coordinates mapped to the screen).</summary>
     private void MoveToBobber(Point captureCoordinate) {
       Rectangle captureRect = screenManager.GetCaptureRectangle();
-      Point screenPoint = new Point(captureRect.X + captureCoordinate.X, captureRect.Y + captureCoordinate.Y);
+      Point screenPoint = new Point(captureRect.X + captureCoordinate.X - 5, captureRect.Y + captureCoordinate.Y - 5);
       InputSender.MoveCursor(screenPoint);
     }
 
