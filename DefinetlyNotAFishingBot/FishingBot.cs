@@ -367,11 +367,23 @@ namespace DefinetlyNotAFishingBot {
       SleepChecked(150);
     }
 
-    /// <summary>Moves the cursor onto the bobber (capture coordinates mapped to the screen).</summary>
+    /// <summary>Safety margin (px) the click point keeps from the capture edge, so it never hits the overlay frame.</summary>
+    private const int CLICK_EDGE_MARGIN = 2;
+
+    /// <summary>
+    /// Moves the cursor onto the bobber (capture coordinates mapped to the
+    /// screen). The picked color usually sits off-center on the bobber, so the
+    /// point is nudged 5 px up-left to reliably hit it — clamped into the
+    /// capture area, because outside of it the click would land on the overlay
+    /// window's frame instead of passing through into the game.
+    /// </summary>
     private void MoveToBobber(Point captureCoordinate) {
       Rectangle captureRect = screenManager.GetCaptureRectangle();
-      Point screenPoint = new Point(captureRect.X + captureCoordinate.X - 5, captureRect.Y + captureCoordinate.Y - 5);
-      InputSender.MoveCursor(screenPoint);
+      int x = captureRect.X + captureCoordinate.X - 5;
+      int y = captureRect.Y + captureCoordinate.Y - 5;
+      x = Math.Max(captureRect.Left + CLICK_EDGE_MARGIN, Math.Min(captureRect.Right - 1 - CLICK_EDGE_MARGIN, x));
+      y = Math.Max(captureRect.Top + CLICK_EDGE_MARGIN, Math.Min(captureRect.Bottom - 1 - CLICK_EDGE_MARGIN, y));
+      InputSender.MoveCursor(new Point(x, y));
     }
 
     /// <summary>
