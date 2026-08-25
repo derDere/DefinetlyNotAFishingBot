@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DefinetlyNotAFishingBot — a fishing bot for WoW WotLK 3.3.5a private servers</title>
+  <meta name="description" content="Definitely not a pixel-based fishing bot for WoW WotLK 3.3.5a private servers. Watches the water, spots the bobber, clicks the bite, loots the fish — no memory reading, no injection, NO admin rights required. Free and open source for Windows.">
+  <meta name="author" content="derDere">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#05090f">
+  <link rel="canonical" href="https://derdere.github.io/DefinetlyNotAFishingBot/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DefinetlyNotAFishingBot">
+  <meta property="og:url" content="https://derdere.github.io/DefinetlyNotAFishingBot/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="DefinetlyNotAFishingBot — a fishing bot for WoW WotLK 3.3.5a">
+  <meta property="og:description" content="Definitely not a fishing bot for WoW WotLK 3.3.5a private servers. Please ignore all the fish it catches. Free, open source, no admin rights required.">
+  <meta property="og:image" content="https://derdere.github.io/DefinetlyNotAFishingBot/screenshot.png">
+  <meta property="og:image:width" content="847">
+  <meta property="og:image:height" content="625">
+  <meta property="og:image:alt" content="The bot's settings window, watching a patch of water for the bobber">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DefinetlyNotAFishingBot — a fishing bot for WoW WotLK 3.3.5a">
+  <meta name="twitter:description" content="Definitely not a fishing bot for WoW WotLK 3.3.5a private servers. Free, open source, no admin rights required.">
+  <meta name="twitter:image" content="https://derdere.github.io/DefinetlyNotAFishingBot/screenshot.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DefinetlyNotAFishingBot",
+    "description": "A pixel-based fishing bot for World of Warcraft: Wrath of the Lich King (3.3.5a) private servers where bots are permitted. It watches the screen, finds the bobber by color, detects the bite and loots it — no memory reading, no injection, no administrator rights required.",
+    "url": "https://derdere.github.io/DefinetlyNotAFishingBot/",
+    "image": "https://derdere.github.io/DefinetlyNotAFishingBot/screenshot.png",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "GameApplication",
+    "softwareVersion": "1.0.0.0",
+    "downloadUrl": "https://github.com/derDere/DefinetlyNotAFishingBot/releases",
+    "author": { "@type": "Person", "name": "derDere", "url": "https://github.com/derDere" },
+    "sameAs": ["https://github.com/derDere/DefinetlyNotAFishingBot"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="www/logo.svg">
+  <link rel="icon" href="www/favicon.ico" sizes="16x16 32x32 48x48 256x256">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Alegreya:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="www/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><img src="www/logo.svg" alt="">DefinetlyNotAFishingBot</a>
+  <div class="links">
+    <a href="#what">What it does</a>
+    <a href="#how">How it works</a>
+    <a href="#start">Quick start</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://github.com/derDere/DefinetlyNotAFishingBot">GitHub</a>
+  </div>
+  <a class="btn small" href="https://github.com/derDere/DefinetlyNotAFishingBot/releases">Download</a>
+</nav>
+
+<header class="hero" id="top">
+  <img class="logo" src="www/logo.svg" alt="A golden fish in an ornate ring — the DefinetlyNotAFishingBot logo">
+  <h1>DefinetlyNotAFishingBot</h1>
+  <p class="tagline">Absolutely, positively, 100% not a fishing bot for World&nbsp;of&nbsp;Warcraft: Wrath of the Lich King (3.3.5a).<br>Please ignore all the fish it catches.</p>
+  <p class="cta"><a class="btn" href="https://github.com/derDere/DefinetlyNotAFishingBot/releases">⬇&nbsp; Download for Windows</a></p>
+  <div class="facts">
+    <span><b>Free</b> &amp; open source</span>
+    <span><b>No admin rights</b> — ever</span>
+    <span><b>No installer</b> — unzip &amp; run</span>
+    <span><b>No memory reading</b>, no injection</span>
+  </div>
+  <figure class="screenshot-frame">
+    <img src="screenshot.png" alt="The bot's settings window, watching a very suspicious patch of water">
+  </figure>
+  <p class="caption">The command center: pick the bobber color, set your keys, press Start, walk away.</p>
+</header>
+
+<main>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="what">
+    <h2>What it actually does</h2>
+    <div class="panel">
+      <p>Fishing in WoW is a beloved pastime that consists of staring at water for hours and clicking a bobber before it stops bobbing. This program loves doing that <em>for</em> you. Once your character stands at the water with a fishing pole ready, the bot runs this routine on repeat, all night if you let it:</p>
+      <ol>
+        <li><b>Gets dressed</b> — presses your outfit key to equip the fishing gear (optional).</li>
+        <li><b>Applies a lure</b> to the pole and casts your buff (both optional), waiting patiently after each step like a well-behaved player.</li>
+        <li><b>Casts</b> the fishing line.</li>
+        <li><b>Finds the bobber</b> on screen and stares at it roughly 25–30 times per second — far more devotion than any human has ever given a bobber.</li>
+        <li><b>Detects the bite</b> the moment the bobber dips and the splash swallows it.</li>
+        <li><b>Right-clicks the bobber</b> to loot the fish.</li>
+        <li>Waits a moment (servers like a little breathing room), re-applies lure and buff when their ~10-minute timers run low, and casts again.</li>
+      </ol>
+      <p>A live counter shows how many times it has looted this run, and a green rectangle in the preview shows exactly where it currently believes the bobber is — so you can check on it like a proud (or suspicious) parent.</p>
+      <p>Built for <b>private servers where fishing bots are allowed</b>. If bots are not allowed where you play, don't use it there — see <a href="#fairplay">Fair play</a>.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="how">
+    <h2>How it works — no dark magic</h2>
+    <div class="panel">
+      <p>The bot plays the game exactly the way you would, just with infinite patience:</p>
+      <div class="cards">
+        <div class="card">
+          <span class="emoji">👀</span>
+          <b>It looks at the screen.</b>
+          <p>You place a see-through overlay window (charmingly titled <em>"Where is the Fish?!"</em>) over the patch of water where your bobber lands. The bot only ever looks inside that frame.</p>
+        </div>
+        <div class="card">
+          <span class="emoji">🎨</span>
+          <b>It finds the bobber by color.</b>
+          <p>You click the bobber's red feather once in the preview; from then on the bot searches for exactly that color in the water.</p>
+        </div>
+        <div class="card">
+          <span class="emoji">🖱️</span>
+          <b>It presses keys and moves the mouse.</b>
+          <p>Regular keyboard and mouse input, the same kind Windows sends when you type — into the game window, which the bot makes sure is focused before every single key press.</p>
+        </div>
+      </div>
+      <p>That's the whole trick. It does <b>not</b> read the game's memory, does <b>not</b> inject anything into the game, and does <b>not</b> modify any game files. As far as your computer is concerned, it's just a program looking at the screen and typing — which is also exactly why it needs no special privileges.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="noadmin">
+    <h2>🛡️ No administrator rights — really</h2>
+    <div class="panel callout">
+      <p class="big">This bot never needs to run as administrator.<br>Not to install (there is nothing to install), not to run, not ever.</p>
+      <p>You never have to type a password, never have to click "Yes" on a scary UAC prompt, and never have to grant a random program from the internet control over your machine. It runs as a plain, unprivileged program — as it should.</p>
+      <p>The one rule that comes with this: <b>don't run WoW as administrator either.</b> Windows only lets a normal program send input to another normal program. If the game runs elevated, the bot's key presses bounce off it — that's a Windows security feature, not a bug. Just start WoW normally (that's the default anyway) and everything works.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="need">
+    <h2>What you need</h2>
+    <div class="panel">
+      <ul>
+        <li>🪟 <b>Windows 10 or 11.</b> The required .NET Framework 4.8 is already part of both — nothing extra to install.</li>
+        <li>🎮 <b>A WoW 3.3.5a (Wrath of the Lich King) client</b> on a <b>private server where fishing bots are permitted</b>.</li>
+        <li>🎣 A character with a fishing pole and the Fishing skill, standing at some water.</li>
+        <li>⏱️ Five minutes for the one-time setup below.</li>
+      </ul>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="start">
+    <h2>Quick start</h2>
+    <div class="panel">
+
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>One-time setup in WoW</h3>
+          <ul>
+            <li>Play in <b>Windowed</b> or <b>Windowed (Maximized)</b> mode — the overlay can't sit on top of exclusive fullscreen.</li>
+            <li>Turn on <b>Auto Loot</b> (Interface → Controls), so one right-click on the bobber grabs everything.</li>
+            <li>Put <b>Fishing</b> on the action bar slot of your fishing key (default: <code>2</code>).</li>
+            <li>Optional but recommended — a <b>lure macro</b> on your lure key:
+              <pre><code>/use Bright Baubles
+/use 16</code></pre>
+              Slot 16 means "main hand", i.e. the equipped pole. Any lure works, just swap the name.</li>
+            <li>Optional: a buff (food, drink, whatever) on the buff key and an equip-my-fishing-gear macro on the outfit key. Anything you don't use, set its key to <code>None</code> in the bot — it will simply be skipped.</li>
+            <li>Close the chat input and any open windows, and face your character toward the water.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3>One-time setup in the bot</h3>
+          <ul>
+            <li><a href="https://github.com/derDere/DefinetlyNotAFishingBot/releases"><b>Download the release</b></a>, unzip it anywhere, and run <code>DefinetlyNotAFishingBot.exe</code>. Three windows appear: the settings window (<em>"Got any Fish?!"</em>), the overlay frame (<em>"Where is the Fish?!"</em>), and a console window that logs what the bot is doing (feel free to minimize it).</li>
+            <li><b>Drag and resize the overlay</b> over the water where your bobber usually lands. The preview at the bottom of the settings window shows exactly what the bot sees. Keep the region reasonably tight (less water = faster and fewer mistakes) and aim for casts landing near its <b>middle</b>, not at an edge. The position is remembered for next time.</li>
+            <li><b>Cast once manually</b>, then <b>click the bobber's red feather in the preview</b>. That picked color is what the bot will hunt for — it's saved for all future sessions.</li>
+            <li>Check the <b>Color tolerance</b> slider (somewhere around 25–40 is a good start). Too low and the bobber isn't found; too high and the bot starts seeing bobbers in plain water.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Fishing time</h3>
+          <ul>
+            <li>Press <b>Start</b>. The settings window politely minimizes itself if it's in the way of the overlay. The bot focuses the game and takes over — <b>hands off mouse and keyboard.</b></li>
+            <li>Watch the overlay's frame color to see what it's doing: <span class="phase off"></span><b>red</b> = bot off, <span class="phase fishing"></span><b>blue</b> = fishing, <span class="phase looting"></span><b>green</b> = a bite! Looting!</li>
+            <li><b>Press Escape to stop — anytime, anywhere.</b> It works even while the game has the focus, and the settings window pops back up. The Escape key is only claimed while the bot runs; afterwards it behaves completely normally again.</li>
+            <li>Want to look something up on Wowhead or chat on Discord? Just <b>alt-tab or click any other window</b> — the bot pauses instantly and waits. Click back into WoW and it resumes as if nothing happened.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="windows">
+    <h2>The three windows</h2>
+    <div class="panel">
+      <div class="table-scroll">
+        <table>
+          <tr><th>Window</th><th>What it is</th></tr>
+          <tr>
+            <td>"Got any Fish?!"</td>
+            <td>The settings window (the screenshot above). Start/Stop, key bindings, timers, color tolerance, the loot counter, and the live preview with a green marker on the detected bobber. The status text is colored too: green = running, yellow = paused, red = stopped.</td>
+          </tr>
+          <tr>
+            <td>"Where is the Fish?!"</td>
+            <td>The overlay frame you place over the water. Its interior is a hole — you see (and the bot clicks) straight through it into the game. Its frame color shows the bot's current phase.</td>
+          </tr>
+          <tr>
+            <td>The console</td>
+            <td>A timestamped log of everything the bot does — every cast, every bite, every fish. Nice for checking what happened while you were gone; safe to minimize and ignore. (For terminal folks: it also accepts <code>start</code>, <code>stop</code>, <code>status</code> and <code>quit</code> on standard input.)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="settings">
+    <h2>Settings explained</h2>
+    <div class="panel">
+      <dl class="settings">
+        <dt>Fishing / Lure / Buff / Outfit Key</dt>
+        <dd>The keys the bot presses for each action. Set them to whatever your action bars and macros use; set a key to <code>None</code> to skip that action entirely.</dd>
+        <dt>Refish Timer</dt>
+        <dd>How long to wait after each attempt before casting again.</dd>
+        <dt>Loot Timer</dt>
+        <dd>How long to hover over the bobber before right-clicking, giving the game a moment to register the mouse-over.</dd>
+        <dt>Color tolerance</dt>
+        <dd>How far a pixel's color may stray from your picked bobber color and still count as "bobber".</dd>
+        <dt>Hide game UI (Alt+Y)</dt>
+        <dd>When checked, the bot hides the game interface while it runs (and restores it on stop), so no window or button can cover the bobber. Uncheck it if you'd rather keep your UI on screen.</dd>
+        <dt>Back to Default</dt>
+        <dd>Resets everything, in case the tinkering got out of hand.</dd>
+      </dl>
+      <p>Everything — including the picked bobber color and the overlay position — is saved automatically to a small file at <code>%USERPROFILE%\.definetly_not_a_fishing_bot_config.json</code>. There is no "Save" button because there is nothing to remember to do.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="faq">
+    <h2>FAQ &amp; Troubleshooting</h2>
+
+    <details>
+      <summary>Is this safe for my account?</summary>
+      <div class="answer">On a private server that allows fishing bots: that's exactly what it's built for. It touches nothing but your screen and your keyboard/mouse — no memory reading, no injection, no modified game files. On servers where bots are forbidden, no technique makes botting "safe" — so don't (see <a href="#fairplay">Fair play</a>).</div>
+    </details>
+    <details>
+      <summary>It says "Bobber not found — recasting…" every single time.</summary>
+      <div class="answer">Raise the color tolerance, re-pick the color from a fresh cast, make the overlay region smaller, or turn the camera so the water fills the region without reddish clutter (terrain, campfires, that one guy in red armor) behind it.</div>
+    </details>
+    <details>
+      <summary>It misses the bobber on some casts only.</summary>
+      <div class="answer">The bobber sometimes lands outside your overlay region. Enlarge the region or re-aim it so casts land near its middle. The bot recovers by recasting — it just costs time.</div>
+    </details>
+    <details>
+      <summary>It clicks, but nothing gets looted.</summary>
+      <div class="answer">Turn on Auto Loot, and make sure the overlay really covers the spot where the bobber floats so the click lands on it.</div>
+    </details>
+    <details>
+      <summary>It "catches" fish that were never there.</summary>
+      <div class="answer">Lower the color tolerance, and avoid regions with moving backgrounds — waterfalls, fountains, other players' pets doing zoomies.</div>
+    </details>
+    <details>
+      <summary>The status says "Color matches too much water".</summary>
+      <div class="answer">The picked color and tolerance match half the lake, so the bot refuses to click at random. Lower the tolerance or pick a more distinct spot of the bobber (the red feather works best).</div>
+    </details>
+    <details>
+      <summary>Key presses don't seem to reach the game.</summary>
+      <div class="answer">The game must not be running as administrator (see <a href="#noadmin">above</a>). Windows display scaling is safest at 100%.</div>
+    </details>
+    <details>
+      <summary>"WoW window not found".</summary>
+      <div class="answer">Start the game before pressing Start. The bot looks for the 3.3.5a client window specifically.</div>
+    </details>
+    <details>
+      <summary>Does it work with retail / Classic / other versions?</summary>
+      <div class="answer">No. It's built for the 3.3.5a (WotLK) client. Other clients have different windows, different bobbers, and — on official servers — very different opinions about bots.</div>
+    </details>
+    <details>
+      <summary>🐧 Does it run on Linux?</summary>
+      <div class="answer">The bot is <b>made for Windows</b> — that's where it's built, tested, and used. Since it's a plain .NET Framework application, it <em>might</em> run on Linux under <a href="https://www.mono-project.com/">Mono</a> — but nobody has promised that, nobody has tested it, and screen capture plus input synthesis are exactly the kind of things that get adventurous under Mono. If you want to try it: go ahead, tinker, you're on your own, and we salute you. 🫡</div>
+    </details>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="fairplay">
+    <h2>⚖️ Fair play</h2>
+    <div class="panel fairplay">
+      <p>This tool exists for <b>private servers where fishing bots are explicitly permitted</b>. Using any bot on official servers, or on private servers that forbid botting, violates their rules and typically ends in a ban — the bot being "just pixels and key presses" does not change that. Where you run it, and whether the rules there allow it, is entirely your responsibility.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="www/divider.svg" alt="">
+
+  <section id="download" style="text-align:center">
+    <h2>Ready to never fish again?</h2>
+    <p><a class="btn" href="https://github.com/derDere/DefinetlyNotAFishingBot/releases">⬇&nbsp; Download the latest release</a></p>
+    <p class="caption">Free · open source · no installer · no admin rights · Windows 10/11</p>
+    <p style="margin-top:1rem"><a class="btn small ghost" href="https://github.com/derDere/DefinetlyNotAFishingBot">View the source on GitHub</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p><a href="https://github.com/derDere/DefinetlyNotAFishingBot">DefinetlyNotAFishingBot on GitHub</a> — bug reports, ideas, and fish pictures welcome.</p>
+  <p class="fine">For the nerds: build instructions and technical details live in the <a href="https://github.com/derDere/DefinetlyNotAFishingBot#-for-the-nerds-building-from-source">README</a>.</p>
+  <p class="fine">This project is not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.</p>
+</footer>
+
+</body>
+</html>

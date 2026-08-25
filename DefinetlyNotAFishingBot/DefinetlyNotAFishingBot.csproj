@@ -35,6 +35,9 @@
   <PropertyGroup>
     <StartupObject>DefinetlyNotAFishingBot.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -75,6 +78,7 @@
     <Compile Include="ScreenManager.cs" />
     <Compile Include="Win32.cs" />
     <Compile Include="WowWindow.cs" />
+    <EmbeddedResource Include="app.ico" />
     <EmbeddedResource Include="frmCapture.resx">
       <DependentUpon>frmCapture.cs</DependentUpon>
     </EmbeddedResource>

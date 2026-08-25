@@ -24,6 +24,7 @@
     /// </summary>
     private void InitializeComponent() {
       this.components = new System.ComponentModel.Container();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
       this.StartBtn = new System.Windows.Forms.Button();
       this.StopBtn = new System.Windows.Forms.Button();
       this.StatusLab = new System.Windows.Forms.Label();
@@ -428,6 +429,7 @@
       this.Controls.Add(this.StatusLab);
       this.Controls.Add(this.StopBtn);
       this.Controls.Add(this.StartBtn);
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "frmMain";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Got any Fish?!";

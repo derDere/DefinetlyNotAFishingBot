@@ -10,7 +10,7 @@
 ![WoW 3.3.5a (WotLK)](https://img.shields.io/badge/WoW-3.3.5a%20(WotLK)-orange)
 ![.NET Framework 4.8](https://img.shields.io/badge/.NET%20Framework-4.8-purple)
 
-**[⬇️ Download v1.0.0.0](https://github.com/derDere/DefinetlyNotAFishingBot/releases/tag/v1.0.0.0)** — no installer, no admin prompt. Unzip, double-click, fish.
+**[⬇️ Download the latest release](https://github.com/derDere/DefinetlyNotAFishingBot/releases)** — no installer, no admin prompt. Unzip, double-click, fish.
 
 ![The bot's settings window, watching a very suspicious patch of water](screenshot.png)
 
@@ -81,7 +81,7 @@ The one rule that comes with this: **don't run WoW as administrator either.** Wi
 
 ### 2. One-time setup in the bot
 
-1. **[Download the release](https://github.com/derDere/DefinetlyNotAFishingBot/releases/tag/v1.0.0.0)**, unzip it anywhere, and run `DefinetlyNotAFishingBot.exe`. Three windows appear: the settings window (*"Got any Fish?!"*), the overlay frame (*"Where is the Fish?!"*), and a console window that logs what the bot is doing (feel free to minimize it — see [The three windows](#the-three-windows)).
+1. **[Download the latest release](https://github.com/derDere/DefinetlyNotAFishingBot/releases)**, unzip it anywhere, and run `DefinetlyNotAFishingBot.exe`. Three windows appear: the settings window (*"Got any Fish?!"*), the overlay frame (*"Where is the Fish?!"*), and a console window that logs what the bot is doing (feel free to minimize it — see [The three windows](#the-three-windows)).
 2. **Drag and resize the overlay** over the water where your bobber usually lands. The preview at the bottom of the settings window shows exactly what the bot sees. Keep the region reasonably tight (less water = faster and fewer mistakes) and aim for casts landing near its **middle**, not at an edge. The position is remembered for next time.
 3. **Cast once manually**, then **click the bobber's red feather in the preview**. That picked color is what the bot will hunt for — it's saved for all future sessions.
 4. Check the **Color tolerance** slider (somewhere around 25–40 is a good start). Too low and the bobber isn't found; too high and the bot starts seeing bobbers in plain water.

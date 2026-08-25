@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ornate golden corner flourish for panel decoration (top-left orientation;
+     the page CSS rotates it for the opposite corner). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <path d="M120 6 L30 6 Q6 6 6 30 L6 120" stroke="#c9a24b" stroke-width="4"/>
+  <path d="M120 16 L34 16 Q16 16 16 34 L16 120" stroke="#c9a24b" stroke-width="2" opacity="0.45"/>
+  <circle cx="30" cy="30" r="6" fill="#c9a24b"/>
+  <path d="M66 0 L73 6 L66 12 L59 6 Z" fill="#c9a24b"/>
+  <path d="M0 66 L6 59 L12 66 L6 73 Z" fill="#c9a24b"/>
+</svg>
