@@ -311,6 +311,16 @@ namespace DefinetlyNotAFishingBot {
       get { return StatusLab.Text; }
     }
 
+    internal void SetStatus(string text, Color color) {
+      StatusLab.ForeColor = color;
+      StatusLab.Text = text;
+      string seperator = " - ";
+      if (string.IsNullOrWhiteSpace(text)) {
+        seperator = "";
+      }
+      myCaptureWindow.Text = frmCapture.DEFAULT_TITLE + seperator + text;
+    }
+
     /// <summary>
     /// Starts the bot (button or console command): minimizes this window (the
     /// capture overlay stays visible), registers the global Escape panic key,
@@ -322,8 +332,7 @@ namespace DefinetlyNotAFishingBot {
       if (fishingBot != null && fishingBot.IsRunning)
         return;
       if (!Config.HasBobberColor) {
-        StatusLab.ForeColor = Color.DarkRed;
-        StatusLab.Text = "Pick the bobber color first (click it in the preview below)!";
+        SetStatus("Pick the bobber color first (click it in the preview below)!", Color.DarkRed);
         return;
       }
 
@@ -337,7 +346,7 @@ namespace DefinetlyNotAFishingBot {
       StartBtn.Enabled = false;
       StopBtn.Enabled = true;
       ApplyStateColors(BotState.Running);
-      StatusLab.Text = "Starting…";
+      SetStatus("Starting…", StatusLab.ForeColor);
       CaughtCountLab.Text = "Loots: 0";
 
       // Global panic key: Escape stops the bot no matter which window has the
@@ -404,7 +413,7 @@ namespace DefinetlyNotAFishingBot {
         }
         return;
       }
-      StatusLab.Text = text;
+      SetStatus(text, StatusLab.ForeColor);
       Console.WriteLine(DateTime.Now.ToString("HH:mm:ss") + "  " + text);
     }
 

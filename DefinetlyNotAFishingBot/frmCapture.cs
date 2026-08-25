@@ -11,6 +11,8 @@ using System.Windows.Forms;
 namespace DefinetlyNotAFishingBot {
   public partial class frmCapture : Form {
 
+    public const string DEFAULT_TITLE = "Where is the Fish?!";
+
     /// <summary>
     /// True once the window is fully up; programmatic placement during startup
     /// must never write the config, only the developer's own moves/resizes do.
