@@ -9,8 +9,11 @@
 ![Admin rights: NOT required](https://img.shields.io/badge/admin%20rights-NOT%20required-brightgreen)
 ![WoW 3.3.5a (WotLK)](https://img.shields.io/badge/WoW-3.3.5a%20(WotLK)-orange)
 ![.NET Framework 4.8](https://img.shields.io/badge/.NET%20Framework-4.8-purple)
+[![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-blue)](LICENSE)
 
 **[⬇️ Download the latest release](https://github.com/derDere/DefinetlyNotAFishingBot/releases)** — no installer, no admin prompt. Unzip, double-click, fish.
+
+**[🌐 Visit the website](https://derdere.github.io/DefinetlyNotAFishingBot/)** — this page, but with more Azeroth.
 
 ![The bot's settings window, watching a very suspicious patch of water](screenshot.png)
 
@@ -161,3 +164,7 @@ msbuild DefinetlyNotAFishingBot.sln
 Output: `DefinetlyNotAFishingBot\bin\Debug\DefinetlyNotAFishingBot.exe`. The executable doubles as a console application: it logs every action with a timestamp and accepts `start | stop | status | quit` on stdin, so it can be driven from a terminal or a script without touching the GUI.
 
 Technical details worth knowing: the bobber search matches pixels by per-channel color tolerance **plus** a red-dominance requirement relative to the picked color (that's what separates a red feather from brown water); the bite is detected when the matching pixel count collapses into the splash or the bobber's center visibly dips, confirmed over two consecutive samples; and the watch loop only captures the small region around the bobber, which is what makes ~30 scans per second possible. Input goes out via `SendInput` with scan codes, and the bot verifies the game has focus immediately before every key press and click.
+
+## 📜 License
+
+Free software, released under the [GNU General Public License v3.0](LICENSE): use it, study it, share it, improve it — as long as it stays just as free.
